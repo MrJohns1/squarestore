@@ -5,8 +5,8 @@ defmodule Squarestore.Products do
 
 	#Alias
 	alias Squarestore.Repo
-	alias Squarestore.Product
-	alias Squarestore.Product.Products
+	alias Squarestore.Products
+	alias Squarestore.Products.Product
 
 	def create_product(productdata) do
 		# Logger.debug("user_address = #{inspect(user_address)}")
