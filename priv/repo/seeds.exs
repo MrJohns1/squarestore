@@ -25,3 +25,18 @@ Squarestore.Identity.create_user(userset2)
 Squarestore.Identity.create_user(userset3)
 Squarestore.Identity.create_user(userset4)
 Squarestore.Identity.create_user(userset5)
+
+
+
+productset1 = %{alternative_products: 1, base_price: 999,
+image: %{}, stock: 10, name: "Coffee Mug", pnr: "CM-01", summary: "A simple solid coffee mug. \n This mug can hold up to 2 cups worth of coffee, perfect for the average coffe drinker. The solidly built handle ensures that you always have a strong grip, no matter how tired you are.", supplier: 1}
+
+productset2 = %{alternative_products: 1, base_price: 9998,
+image: %{}, stock: 10, name: "Beer Mug", pnr: "BM-01", summary: "A pint sized Mug. \n This mug can hold up to a single pint of golden brew. \n Get the pub feel right at home when watching that football match on TV.", supplier: 1}
+
+productset3 = %{alternative_products: 1, base_price: 999,
+image: %{}, stock: 10, name: "Tankard", pnr: "BM-XL-01", summary: "This is our flagship product of the XL series. \n This Tankard can hold a whole 1.5 Litres of your favourite Beer. It even comes with our unique Tankard\u2122 lid, that helps prevent spillage even under most extreme drinking conditions.", supplier: 1}
+
+Squarestore.Products.create_product(productset1)
+Squarestore.Products.create_product(productset2)
+Squarestore.Products.create_product(productset3)
