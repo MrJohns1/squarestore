@@ -22,12 +22,26 @@ defmodule SquarestoreWeb.UserController do
         |> redirect(to: user_path(conn, :show, user))
  
     end
+  # def create2(conn, %{"user" => user_params}) do
+  #   case Identity.create_user(user_params) do
+  #     {:ok, user} ->
+  #       conn
+  #       |> put_flash(:info, "User created successfully.")
+  #       |> redirect(to: user_path(conn, :show, user))
+  #   end
+  # end  
   end
 
+  # def show(conn, %{"id" => id}) do
+  #   user = Identity.get_user!(id)
+  #   render(conn, "show.html", user: user)
+  # end
+
   def show(conn, %{"id" => id}) do
-    user = Identity.get_user!(id)
-    render(conn, "show.html", user: user)
-  end
+		users = Identity.list_users()
+		user = Identity.get_user!(id)
+	    render conn, "show.html", users: users, user: user
+	end
 
   def edit(conn, %{"id" => id}) do
     user = Identity.get_user!(id)

@@ -20,23 +20,35 @@
   <li>
     <strong>Email:</strong>
     <%= @user.email %>
+    </li>
+    <li>
+    <strong>Phone:</strong>
+    <%= @user.phone %>
   </li>
+  <%= for address <- @user.addresses do %>
   <li>
     <strong>Address:</strong>
-    <%= @user.address %>
+    <%= address.address %>
   </li>
 
   <li>
     <strong>Zip code:</strong>
-    <%= @user.zip_code %>
+    <%= address.zip_code %>
   </li>
 
   <li>
-    <strong>Country:</strong>
-    <%= @user.country %>
+    <strong>City:</strong>
+    <%= address.city %>
   </li>
 
+  <%# <li>
+    <strong>Country:</strong>
+    <%= address.country 
+  </li> %>
+  <% end %>
+
 </ul>
+		
 
           <div class="sq-card-footer sq-btn-3">
 
