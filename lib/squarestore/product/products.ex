@@ -7,7 +7,7 @@ defmodule Squarestore.Products.Product do
     field :alternative_products, :integer
     field :base_price, :integer
     field :image, :map
-    field :lager_status, :integer
+    field :stock, :integer
     field :name, :string
     field :pnr, :string
     field :summary, :string
@@ -19,7 +19,7 @@ defmodule Squarestore.Products.Product do
   @doc false
   def changeset(products, attrs) do
     products
-    |> cast(attrs, [:name, :image, :pnr, :summary, :base_price, :lager_status, :supplier, :alternative_products])
+    |> cast(attrs, [:name, :image, :pnr, :summary, :base_price, :stock, :supplier, :alternative_products])
     |> validate_required([:name, :image, :pnr, :summary, :base_price, :lager_status, :supplier, :alternative_products])
   end
 end

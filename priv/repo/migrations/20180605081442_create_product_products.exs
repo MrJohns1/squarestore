@@ -8,7 +8,7 @@ defmodule Squarestore.Repo.Migrations.CreateProductProducts do
       add :pnr, :string
       add :summary, :string
       add :base_price, :integer
-      add :lager_status, :integer
+      add :stock, :integer
       add :supplier, :integer
       add :alternative_products, :integer
 
