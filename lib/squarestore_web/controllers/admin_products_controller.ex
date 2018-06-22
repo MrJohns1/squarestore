@@ -1,8 +1,7 @@
-defmodule SquarestoreWeb.AdminProdController do
+defmodule SquarestoreWeb.AdminProductsController do
     use SquarestoreWeb, :controller
-    
+
     def index(conn, _params) do
       render conn, "index.html"
     end
   end
-  

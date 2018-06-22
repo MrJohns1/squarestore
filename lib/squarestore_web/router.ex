@@ -22,7 +22,7 @@ defmodule SquarestoreWeb.Router do
 		get "/invoice", InvoiceController, :index
 		get "/shopping", ShoppingController, :index
 		resources "/products", ProductsController
-		resources "/adminproducts", AdminProductController
+		resources "/adminproducts", AdminProductsController
 		resources "/adminuser", AdminUserController
 		resources "/user", UserController
 	end

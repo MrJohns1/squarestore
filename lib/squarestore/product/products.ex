@@ -3,7 +3,7 @@ defmodule Squarestore.Products.Product do
   import Ecto.Changeset
 
 
-  schema "product_products" do
+  schema "Products" do
     field :alternative_products, :integer
     field :base_price, :integer
     field :image, :map

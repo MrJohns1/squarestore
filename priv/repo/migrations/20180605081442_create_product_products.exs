@@ -2,7 +2,7 @@ defmodule Squarestore.Repo.Migrations.CreateProductProducts do
   use Ecto.Migration
 
   def change do
-    create table(:product_products) do
+    create table(:products) do
       add :name, :string
       add :image, :map
       add :pnr, :string
